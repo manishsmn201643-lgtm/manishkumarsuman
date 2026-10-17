@@ -1,34 +1,44 @@
-# Manish Kumar Suman — Freelance Developer Portfolio
+# Manish Kumar Suman — Portfolio
 
-A responsive static portfolio built with HTML, CSS and vanilla JavaScript. No build step or backend is required.
+A premium, responsive, single-page portfolio built with plain HTML, CSS and JavaScript. No build step, no backend, free to host anywhere.
 
-## Before publishing
+## Files
 
-1. Open `script.js`.
-2. Replace `YOUR_EMAIL@example.com` with your professional email address.
-3. Replace the LinkedIn and GitHub placeholder URLs in the `CONTACT` object with your actual profile URLs.
-4. Check project descriptions and only add public screenshots or live project links that you are allowed to share.
-5. Do not publish client code, credentials, customer data or confidential screenshots.
+| File | Purpose |
+| --- | --- |
+| `index.html` | The page: hero, projects, experience, skills, hire-me, education, contact |
+| `style.css` | Dark premium theme, responsive layout, animations |
+| `script.js` | Mobile menu, copy-email button, scroll reveal, back-to-top |
+| `assets/manish.jpg` | Profile photo |
+| `assets/Manish-Kumar-Suman-Resume.pdf` | Resume served by the "Download resume" buttons |
 
-The project preview illustrations are CSS-built mockups for presentation; they are not real screenshots of production applications.
+## Update content
+
+- **Resume**: replace `assets/Manish-Kumar-Suman-Resume.pdf` with a new file of the same name.
+- **Photo**: replace `assets/manish.jpg` (portrait orientation looks best).
+- **Projects / text**: edit `index.html`. Each project card is an `<a class="project">` with its live link in `href`.
+- **Email / phone / LinkedIn**: search `index.html` for `manish.smn@gmail.com`, `9887530136` and `linkedin.com`.
 
 ## Preview locally
 
-Open `index.html` in a modern browser. Internet access is needed for the Google Fonts; system fallbacks will work without it.
+Double-click `index.html`. Internet is needed only for Google Fonts; system fonts are used as fallback.
 
-## Publish for free with GitHub Pages
+## Launch for free — GitHub Pages (recommended)
 
-1. Sign in at https://github.com/ or create an account.
-2. Create a **public** repository named exactly `YOUR-USERNAME.github.io` (replace with your GitHub username).
-3. Upload `index.html`, `style.css`, `script.js` and `README.md` to the repository root.
-4. Open the repository's **Settings → Pages**.
-5. Under **Build and deployment**, choose **Deploy from a branch**, select `main` and `/ (root)`, then click **Save**.
-6. Wait for deployment and open `https://YOUR-USERNAME.github.io/`.
+1. Create a free account at https://github.com and sign in.
+2. Click **New repository**, name it exactly `YOUR-USERNAME.github.io` (use your GitHub username), keep it **Public**, click **Create repository**.
+3. Click **uploading an existing file**, drag in `index.html`, `style.css`, `script.js`, `README.md` and the whole `assets` folder, then click **Commit changes**.
+4. Open **Settings → Pages**. Under **Build and deployment** choose **Deploy from a branch**, branch `main`, folder `/ (root)`, click **Save**.
+5. After 1–3 minutes your site is live at `https://YOUR-USERNAME.github.io/`.
 
-Publishing can take several minutes. GitHub Pages sites are public; never upload secrets or private client data.
+Put that link on your LinkedIn profile, your resume header and in job applications.
 
-Official guide: https://docs.github.com/en/pages/quickstart
+## Alternative free hosts
 
-## Alternative: Vercel
+- **Netlify Drop**: go to https://app.netlify.com/drop and drag the whole `manish-portfolio` folder onto the page. You get a live URL instantly.
+- **Vercel**: https://vercel.com/new, import the GitHub repository, no build command needed.
+- **Cloudflare Pages**: https://pages.cloudflare.com, connect the repository, no build command.
 
-You can import the repository at https://vercel.com/new. Since this is a static HTML site, no build command is required; set the output directory to `.` if prompted. Vercel's free Hobby plan has usage and plan restrictions; review current terms before using it for commercial work.
+## Custom domain (optional)
+
+Buy a domain such as `manishsuman.dev`, then in GitHub **Settings → Pages → Custom domain** enter it and add the DNS records GitHub shows you.

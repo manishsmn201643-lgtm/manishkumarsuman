@@ -3,65 +3,315 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0b1020">
-  <meta name="description" content="Manish Kumar Suman — Full-stack developer specializing in Laravel, Shopify apps, APIs, Node.js, React and SaaS products.">
-  <title>Manish Kumar Suman — Full-Stack Developer</title>
+  <meta name="theme-color" content="#0a0f1c">
+  <meta name="description" content="Manish Kumar Suman — Full Stack Developer with 6+ years building Shopify apps, Laravel SaaS platforms and API integrations. Open to office, remote and freelance work.">
+  <meta property="og:title" content="Manish Kumar Suman — Full Stack Developer">
+  <meta property="og:description" content="Shopify apps, Laravel SaaS platforms, REST APIs. 6+ years of production experience.">
+  <meta property="og:image" content="assets/manish.jpg">
+  <title>Manish Kumar Suman — Full Stack Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="site-shell">
-    <header class="topbar">
-      <a class="brand" href="#home" aria-label="Manish home"><span class="brand-mark">M<span>.</span></span><span>MANISH SUMAN</span></a>
-      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact" class="nav-cta">Let's talk <span>↗</span></a>
-      </nav>
-    </header>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-a" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-b" aria-hidden="true"></div>
 
-    <main>
-      <section class="hero section" id="home">
-        <div class="hero-copy">
-          <div class="eyebrow"><span class="status-dot"></span> AVAILABLE FOR SELECT FREELANCE PROJECTS</div>
-          <h1>I build digital products<br>that <span class="gradient-text">move business forward.</span></h1>
-          <p class="hero-lede">I'm Manish — a full-stack developer focused on Laravel, Shopify apps, APIs and SaaS products. I help businesses and agencies ship reliable features, solve technical problems and keep products moving.</p>
-          <div class="hero-actions"><a class="button button-primary" href="#contact">Discuss a project <span>↗</span></a><a class="button button-quiet" href="#work">Explore my work <span>↓</span></a></div>
-          <div class="hero-meta"><div><strong>6+ years</strong><span>Development experience</span></div><div><strong>Apps + SaaS</strong><span>Product-minded delivery</span></div><div><strong>Remote-ready</strong><span>Agency & direct clients</span></div></div>
+  <header class="topbar">
+    <a class="brand" href="#home"><span class="brand-mark">MS</span><span class="brand-name">Manish Suman</span></a>
+    <nav class="nav" id="nav" aria-label="Main navigation">
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#services">Hire me</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-resume" href="assets/Manish-Kumar-Suman-Resume.pdf" download>Resume ↓</a>
+    </nav>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-copy reveal">
+        <div class="status"><span class="status-dot"></span> Open to full-time, remote &amp; freelance work</div>
+        <h1>Hi, I'm <span class="grad">Manish Kumar Suman</span>.<br>I build Shopify apps &amp; SaaS platforms that real businesses run on.</h1>
+        <p class="lede">Full Stack Developer with 6+ years of experience in Laravel, JavaScript and API integrations. I've shipped Shopify apps used by live merchants, a workforce-management SaaS, and I'm currently building Bookmizo, an all-in-one booking platform.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">View my work <span>↓</span></a>
+          <a class="btn btn-ghost" href="assets/Manish-Kumar-Suman-Resume.pdf" download>Download resume <span>↓</span></a>
+          <a class="btn btn-ghost" href="#contact">Contact me <span>↗</span></a>
         </div>
-        <div class="hero-art" aria-label="Developer profile illustration">
-          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-          <div class="code-card"><div class="window-bar"><i></i><i></i><i></i><span>developer.js</span></div><div class="code-lines"><p><b>const</b> developer = {</p><p class="indent"><span>name:</span> <em>'Manish Suman'</em>,</p><p class="indent"><span>focus:</span> <em>'SaaS & integrations'</em>,</p><p class="indent"><span>stack:</span> [</p><p class="indent more"><em>'Laravel'</em>, <em>'Shopify'</em>,</p><p class="indent more"><em>'Node.js'</em>, <em>'React'</em></p><p class="indent">],</p><p class="indent"><span>mindset:</span> <em>'Ship with care'</em></p><p>};</p><p class="cursor-line"><b>→</b> <span class="cursor"></span></p></div></div>
-          <div class="floating-chip chip-api"><span class="chip-icon">⌘</span><span><b>API integrations</b><small>Built to connect</small></span></div>
-          <div class="floating-chip chip-saas"><span class="chip-icon">◈</span><span><b>SaaS products</b><small>Built to scale</small></span></div>
-          <div class="hero-glow"></div>
+        <div class="hero-stats">
+          <div><strong>6+</strong><span>Years experience</span></div>
+          <div><strong>5+</strong><span>Production products</span></div>
+          <div><strong>2</strong><span>Shopify App Store apps</span></div>
+          <div><strong>IST</strong><span>Kota, Rajasthan, India</span></div>
         </div>
-      </section>
-
-      <section class="trust-strip" aria-label="Technology stack"><span>WORKING ACROSS THE STACK</span><div class="tech-list"><b>Laravel / PHP</b><b>Shopify</b><b>JavaScript</b><b>Node.js</b><b>React</b><b>PostgreSQL</b></div></section>
-
-      <section class="section work-section" id="work">
-        <div class="section-heading"><div><div class="eyebrow">SELECTED WORK</div><h2>Products I've helped <span class="gradient-text">bring to life.</span></h2></div><p>A selection of product work across e-commerce, learning and booking workflows. Details can be tailored to each client's needs.</p></div>
-        <div class="project-grid">
-          <article class="project-card project-featured"><div class="project-top"><span class="project-number">01 / SHOPIFY APP</span><span class="project-arrow">↗</span></div><div class="project-visual visual-apt"><div class="mini-window"><div class="mini-top"><span></span><span></span><span></span></div><div class="calendar-ui"><div class="calendar-title">Appointment calendar <b>•••</b></div><div class="calendar-month">October 2026 <span>‹　›</span></div><div class="calendar-days"><i>M</i><i>T</i><i>W</i><i>T</i><i>F</i><i>S</i><i>S</i></div><div class="calendar-dates"><i>12</i><i>13</i><i class="selected">14</i><i>15</i><i>16</i><i>17</i><i>18</i><i>19</i><i>20</i><i>21</i><i>22</i><i>23</i><i>24</i><i>25</i></div><div class="slot-row"><span>10:00 AM</span><b>Available</b></div></div></div></div><div class="project-content"><div class="project-tags"><span>Laravel</span><span>JavaScript</span><span>jQuery</span></div><h3>APTBook — Appointment Booking</h3><p>A Shopify booking app project focused on appointment scheduling workflows and app-side functionality.</p><div class="project-foot"><span>Shopify application</span><span class="text-link">Project overview <b>↗</b></span></div></div></article>
-          <article class="project-card"><div class="project-top"><span class="project-number">02 / E-LEARNING</span><span class="project-arrow">↗</span></div><div class="project-visual visual-course"><div class="course-window"><div class="course-sidebar"><span class="side-logo">C.</span><i></i><i></i><i></i><i></i></div><div class="course-main"><div class="course-welcome">Your learning space</div><div class="course-banner"><small>FEATURED COURSE</small><b>Learn something<br>great today.</b><span></span></div><div class="course-stats"><span><b>My courses</b><small>Continue learning</small></span><span class="stat-pill">View all ↗</span></div><div class="course-line"><i></i><span><b>Course progress</b><small>Keep it going</small></span></div></div></div></div><div class="project-content"><div class="project-tags"><span>Laravel</span><span>JavaScript</span><span>jQuery</span></div><h3>CourseKart</h3><p>A Shopify app project in the online course space, built with a Laravel backend and JavaScript-based interfaces.</p><div class="project-foot"><span>Shopify application</span><span class="text-link">Project overview <b>↗</b></span></div></div></article>
-          <article class="project-card"><div class="project-top"><span class="project-number">03 / BOOKING SAAS</span><span class="project-arrow">↗</span></div><div class="project-visual visual-bookmizo"><div class="saas-window"><div class="saas-nav"><span class="saas-logo">book<span>mizo</span></span><span class="saas-avatar">M</span></div><div class="saas-body"><div class="saas-greeting">Good morning 👋<b>Booking overview</b></div><div class="metric-row"><div><small>Total bookings</small><b>128</b><em>↗ Overview</em></div><div><small>Upcoming</small><b>24</b><em>Next 7 days</em></div></div><div class="chart-card"><span>Booking activity</span><div class="chart-bars"><i style="height:34%"></i><i style="height:52%"></i><i style="height:42%"></i><i style="height:75%"></i><i style="height:58%"></i><i style="height:92%"></i><i style="height:67%"></i><i style="height:82%"></i></div></div></div></div></div><div class="project-content"><div class="project-tags"><span>Node.js</span><span>React</span><span>Prisma</span><span>PostgreSQL</span></div><h3>BookMizo — Booking SaaS</h3><p>A multi-tenant booking platform concept with business-specific booking experiences and a modern full-stack architecture.</p><div class="project-foot"><span>SaaS product</span><span class="text-link">Project overview <b>↗</b></span></div></div></article>
+      </div>
+      <div class="hero-photo reveal">
+        <div class="photo-frame">
+          <img src="assets/manish.jpg" alt="Portrait of Manish Kumar Suman" width="420" height="480">
         </div>
-        <p class="project-note">Note: Product visuals are illustrative portfolio mockups, not screenshots of live production dashboards. Project descriptions summarize the work and technologies listed in this portfolio.</p>
-      </section>
+        <div class="float-chip chip-a"><b>Laravel · PHP</b><small>Backend &amp; REST APIs</small></div>
+        <div class="float-chip chip-b"><b>Shopify Apps</b><small>Live on the App Store</small></div>
+        <div class="float-chip chip-c"><b>SaaS</b><small>Booking &amp; CRM systems</small></div>
+      </div>
+    </section>
 
-      <section class="services-section" id="services"><div class="section section-inner"><div class="section-heading"><div><div class="eyebrow">HOW I CAN HELP</div><h2>Useful engineering.<br><span class="gradient-text">No unnecessary complexity.</span></h2></div><p>Bring me in for a defined project, extra development capacity or ongoing technical support.</p></div><div class="service-grid"><article class="service-card"><span class="service-icon">⌘</span><h3>Shopify apps & integrations</h3><p>Custom app features, GraphQL/API integrations, webhooks, app troubleshooting and e-commerce workflows.</p><span class="service-index">01</span></article><article class="service-card"><span class="service-icon">{ }</span><h3>Laravel backend & APIs</h3><p>Backend features, REST APIs, database work, third-party services, bug fixes and performance improvements.</p><span class="service-index">02</span></article><article class="service-card"><span class="service-icon">◈</span><h3>SaaS & full-stack delivery</h3><p>Product features using Node.js, React and PostgreSQL, plus ongoing support for growing applications.</p><span class="service-index">03</span></article></div></div></section>
+    <!-- TECH STRIP -->
+    <section class="strip" aria-label="Technology stack">
+      <span class="strip-label">Working across the stack</span>
+      <div class="strip-items">
+        <b>PHP</b><b>Laravel</b><b>JavaScript</b><b>jQuery</b><b>React.js</b><b>Node.js</b><b>MySQL</b><b>PostgreSQL</b><b>Shopify</b><b>WordPress</b><b>Wix</b><b>REST APIs</b>
+      </div>
+    </section>
 
-      <section class="section about-section" id="about"><div class="about-panel"><div class="about-visual"><div class="about-monogram">M<span>.</span></div><div class="about-orbit"></div><span class="about-caption">BUILD · IMPROVE · MAINTAIN</span></div><div class="about-copy"><div class="eyebrow">A LITTLE ABOUT ME</div><h2>Technical thinking.<br><span class="gradient-text">Product-focused execution.</span></h2><p>I'm Manish Kumar Suman, a web developer with 6+ years of experience across web applications, Shopify apps and SaaS products. I enjoy turning business requirements into practical features and helping teams maintain momentum.</p><p>I work with both direct clients and development agencies, including teams that need dependable white-label or overflow development support.</p><div class="about-points"><span>✓ Clear communication</span><span>✓ Practical problem-solving</span><span>✓ Maintainable solutions</span><span>✓ Remote collaboration</span></div></div></div></section>
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">Key projects</div>
+          <h2>Products I've built and <span class="grad">shipped to real users.</span></h2>
+        </div>
+        <p>Click any card to open the live product. Each one is in production and used by actual merchants and businesses.</p>
+      </div>
 
-      <section class="section process-section"><div class="section-heading"><div><div class="eyebrow">A SIMPLE PROCESS</div><h2>From first message<br>to <span class="gradient-text">shipped work.</span></h2></div></div><div class="process-grid"><div><span>01</span><h3>Understand</h3><p>We discuss the goal, existing setup, scope and success criteria.</p></div><div><span>02</span><h3>Plan</h3><p>I outline deliverables, milestones, timeline and pricing before work starts.</p></div><div><span>03</span><h3>Build</h3><p>I implement the agreed scope and share progress at clear checkpoints.</p></div><div><span>04</span><h3>Deliver</h3><p>We review the work, resolve agreed fixes and plan any next steps.</p></div></div></section>
+      <div class="project-grid">
+        <a class="project featured reveal" href="https://apps.shopify.com/aptbook-appointment-booking" target="_blank" rel="noopener">
+          <div class="project-top"><span class="num">01 · Shopify App</span><span class="arrow">↗</span></div>
+          <div class="project-art art-apt">
+            <div class="mock">
+              <div class="mock-bar"><i></i><i></i><i></i><span>APTBook · Appointment calendar</span></div>
+              <div class="mock-cal">
+                <div class="cal-head">October 2026</div>
+                <div class="cal-days"><i>M</i><i>T</i><i>W</i><i>T</i><i>F</i><i>S</i><i>S</i></div>
+                <div class="cal-dates"><i>12</i><i>13</i><i class="sel">14</i><i>15</i><i>16</i><i>17</i><i>18</i><i>19</i><i>20</i><i>21</i><i>22</i><i>23</i><i>24</i><i>25</i></div>
+                <div class="slot"><span>10:00 AM</span><b>Available</b></div>
+                <div class="slot"><span>11:30 AM</span><b>Available</b></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="tags"><span>Laravel</span><span>Shopify API</span><span>JavaScript</span><span>MySQL</span></div>
+            <h3>APTBook — Shopify Appointment Booking App</h3>
+            <p>A complete booking system for Shopify merchants: service scheduling, time-slot management, staff availability, customer handling and automated confirmations. Published on the Shopify App Store and used by live stores.</p>
+            <div class="project-foot"><span>apps.shopify.com</span><span class="link">Open on Shopify App Store ↗</span></div>
+          </div>
+        </a>
 
-      <section class="contact-section" id="contact"><div class="contact-inner"><div class="eyebrow"><span class="status-dot"></span> HAVE A PROJECT IN MIND?</div><h2>Let's make your next<br><span class="gradient-text">release a good one.</span></h2><p>Tell me what you're building, what needs fixing, or where your team needs extra development support.</p><div class="contact-actions"><a class="button button-primary" id="email-cta" href="mailto:YOUR_EMAIL@example.com?subject=Freelance%20development%20inquiry">Email me about a project <span>↗</span></a><button class="button button-quiet" id="copy-email" type="button">Copy email address</button></div><p class="contact-hint" id="contact-hint">Before publishing, replace the placeholder email and social links in <code>script.js</code>.</p></div><div class="contact-decoration"><span>LET'S BUILD</span><b>↗</b></div></section>
-    </main>
+        <a class="project reveal" href="https://apps.shopify.com/courseskart" target="_blank" rel="noopener">
+          <div class="project-top"><span class="num">02 · Shopify App</span><span class="arrow">↗</span></div>
+          <div class="project-art art-course">
+            <div class="mock">
+              <div class="mock-bar"><i></i><i></i><i></i><span>CourseKart · Dashboard</span></div>
+              <div class="mock-course">
+                <div class="course-banner"><small>Featured course</small><b>Sell courses from your store</b></div>
+                <div class="course-row"><i style="width:72%"></i><span>72%</span></div>
+                <div class="course-row"><i style="width:45%"></i><span>45%</span></div>
+                <div class="course-row"><i style="width:90%"></i><span>90%</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="tags"><span>Laravel</span><span>Shopify API</span><span>jQuery</span></div>
+            <h3>CourseKart — Shopify Course Selling App</h3>
+            <p>Lets merchants sell online courses directly from their Shopify store. Admin control panel, lesson and content management, student access and progress tracking.</p>
+            <div class="project-foot"><span>apps.shopify.com</span><span class="link">Open on Shopify App Store ↗</span></div>
+          </div>
+        </a>
 
-    <footer class="footer"><a class="brand" href="#home"><span class="brand-mark">M<span>.</span></span><span>MANISH SUMAN</span></a><span>© <span id="year"></span> Manish Kumar Suman. Built with care.</span><div class="footer-links"><a id="linkedin-link" href="#contact">LinkedIn ↗</a><a id="github-link" href="#contact">GitHub ↗</a></div></footer>
-  </div>
+        <a class="project reveal" href="https://chokidaar.com/homepage" target="_blank" rel="noopener">
+          <div class="project-top"><span class="num">03 · SaaS Platform</span><span class="arrow">↗</span></div>
+          <div class="project-art art-chok">
+            <div class="mock">
+              <div class="mock-bar"><i></i><i></i><i></i><span>Chokidaar · Workforce overview</span></div>
+              <div class="mock-metrics">
+                <div><small>Guards on duty</small><b>48</b></div>
+                <div><small>Sites covered</small><b>12</b></div>
+                <div><small>Reports today</small><b>131</b></div>
+              </div>
+              <div class="mock-bars"><i style="height:40%"></i><i style="height:65%"></i><i style="height:52%"></i><i style="height:80%"></i><i style="height:70%"></i><i style="height:95%"></i><i style="height:60%"></i></div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="tags"><span>Laravel</span><span>MySQL</span><span>REST API</span><span>Multi-role</span></div>
+            <h3>Chokidaar — Security Workforce Management SaaS</h3>
+            <p>Workforce management platform for security companies: multi-user roles (admin, supervisor, guard), shift and site assignment, attendance and reporting dashboards.</p>
+            <div class="project-foot"><span>chokidaar.com</span><span class="link">Visit website ↗</span></div>
+          </div>
+        </a>
+
+        <a class="project reveal" href="https://bookmizo.com/" target="_blank" rel="noopener">
+          <div class="project-top"><span class="num">04 · SaaS · In progress</span><span class="arrow">↗</span></div>
+          <div class="project-art art-book">
+            <div class="mock">
+              <div class="mock-bar"><i></i><i></i><i></i><span>Bookmizo · Bookings</span></div>
+              <div class="mock-metrics">
+                <div><small>Total bookings</small><b>128</b></div>
+                <div><small>Upcoming</small><b>24</b></div>
+                <div><small>Team members</small><b>6</b></div>
+              </div>
+              <div class="mock-bars"><i style="height:34%"></i><i style="height:52%"></i><i style="height:42%"></i><i style="height:75%"></i><i style="height:58%"></i><i style="height:92%"></i><i style="height:67%"></i></div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="tags"><span>Laravel</span><span>React.js</span><span>Node.js</span><span>PostgreSQL</span></div>
+            <h3>Bookmizo — All-in-One Booking System</h3>
+            <p>A scalable multi-user SaaS for appointment booking and scheduling across businesses. Focused on performance, real-world usability and a modern full-stack architecture. Currently in active development.</p>
+            <div class="project-foot"><span>bookmizo.com</span><span class="link">Visit website ↗</span></div>
+          </div>
+        </a>
+
+        <div class="project project-static reveal">
+          <div class="project-top"><span class="num">05 · Client work</span></div>
+          <div class="project-body">
+            <div class="tags"><span>Shopify</span><span>Wix</span><span>WordPress</span><span>APIs</span></div>
+            <h3>Shopify &amp; Wix Projects (Multiple)</h3>
+            <p>Worked on many existing Shopify apps and Wix-based client projects: feature enhancements, bug fixes, performance improvements, payment gateway integrations and custom business logic.</p>
+            <div class="project-foot"><span>Ongoing · Saini Web Solutions</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">Experience</div>
+          <h2>Nine years of <span class="grad">building and shipping.</span></h2>
+        </div>
+      </div>
+      <div class="timeline">
+        <article class="tl-item reveal">
+          <div class="tl-when">Jan 2020 — Present</div>
+          <div class="tl-body">
+            <h3>Web Developer <span>· Saini Web Solutions, Kota</span></h3>
+            <ul>
+              <li>Developed and maintained multiple Shopify apps used by real merchants</li>
+              <li>Built scalable SaaS platforms for booking and workforce management</li>
+              <li>Designed and implemented REST APIs for system integrations</li>
+              <li>Worked on CRM systems and automation workflows</li>
+              <li>Integrated payment gateways and third-party APIs</li>
+              <li>Use AI-assisted tooling daily: Cursor, Windsurf, Keero and Claude</li>
+            </ul>
+          </div>
+        </article>
+        <article class="tl-item reveal">
+          <div class="tl-when">Apr 2017 — Sep 2019</div>
+          <div class="tl-body">
+            <h3>MIS Executive &amp; Computer Trainer <span>· PMKVY Program</span></h3>
+            <ul>
+              <li>Managed student data and reporting systems</li>
+              <li>Delivered training in computer fundamentals and IT skills</li>
+            </ul>
+          </div>
+        </article>
+        <article class="tl-item reveal">
+          <div class="tl-when">Oct 2015 — Nov 2016</div>
+          <div class="tl-body">
+            <h3>PHP Developer <span>· Infigo Software</span></h3>
+            <ul>
+              <li>Developed PHP and MySQL web applications for client projects</li>
+              <li>Fixed bugs and improved application performance</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">Technical skills</div>
+          <h2>The tools I <span class="grad">work with every day.</span></h2>
+        </div>
+      </div>
+      <div class="skill-grid">
+        <div class="skill-card reveal"><h3>Languages</h3><div class="chips"><span>PHP</span><span>JavaScript</span><span>jQuery</span><span>HTML</span><span>CSS</span></div></div>
+        <div class="skill-card reveal"><h3>Frameworks</h3><div class="chips"><span>Laravel</span><span>React.js</span><span>Node.js</span><span>Bootstrap</span></div></div>
+        <div class="skill-card reveal"><h3>Databases</h3><div class="chips"><span>MySQL</span><span>PostgreSQL</span></div></div>
+        <div class="skill-card reveal"><h3>Platforms</h3><div class="chips"><span>Shopify</span><span>WordPress</span><span>Wix</span></div></div>
+        <div class="skill-card reveal"><h3>Tools</h3><div class="chips"><span>GitHub</span><span>Bitbucket</span><span>Postman</span><span>Cursor AI</span><span>Windsurf</span><span>Keero</span><span>Claude</span></div></div>
+        <div class="skill-card reveal"><h3>Concepts</h3><div class="chips"><span>REST APIs</span><span>SaaS Development</span><span>CRM Systems</span><span>Third-party Integrations</span><span>Payment Gateways</span></div></div>
+      </div>
+    </section>
+
+    <!-- SERVICES / HIRE ME -->
+    <section class="section" id="services">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">Hire me</div>
+          <h2>Available for full-time roles, <span class="grad">remote work and freelance.</span></h2>
+        </div>
+        <p>Whether you need a developer on your team or a contractor for a defined project, here's how I can help.</p>
+      </div>
+      <div class="service-grid">
+        <article class="service reveal"><span class="svc-icon">🏢</span><h3>Full-time · Office or Remote</h3><p>Looking for a Full Stack / Laravel / Shopify developer role. Based in Kota, Rajasthan and happy to relocate or work fully remote.</p></article>
+        <article class="service reveal"><span class="svc-icon">🛍️</span><h3>Shopify App Development</h3><p>Custom public or private Shopify apps, API and webhook integrations, theme customizations and fixes for existing apps.</p></article>
+        <article class="service reveal"><span class="svc-icon">⚙️</span><h3>Laravel Backend &amp; APIs</h3><p>REST APIs, SaaS features, admin panels, CRM systems, payment integrations and performance tuning for live systems.</p></article>
+        <article class="service reveal"><span class="svc-icon">🚀</span><h3>Freelance &amp; Agency Support</h3><p>Overflow development for agencies, bug fixes, feature work and long-term maintenance for Shopify, Wix and WordPress projects.</p></article>
+      </div>
+    </section>
+
+    <!-- EDUCATION + STRENGTHS -->
+    <section class="section two-col" id="education">
+      <div class="panel reveal">
+        <div class="eyebrow">Education</div>
+        <ul class="edu">
+          <li><b>MCA</b><span>Rajasthan Technical University, Kota · 2011 – 2014</span></li>
+          <li><b>BCA</b><span>University of Kota · 2008 – 2011</span></li>
+          <li><b>12th (RBSE)</b><span>2008</span></li>
+          <li><b>10th (RBSE)</b><span>2006</span></li>
+        </ul>
+      </div>
+      <div class="panel reveal">
+        <div class="eyebrow">Strengths</div>
+        <ul class="points">
+          <li>Strong problem-solving and debugging skills</li>
+          <li>Experience handling live production systems</li>
+          <li>Fast learner, adaptable to new technologies</li>
+          <li>Works well independently and in teams</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div class="contact-inner reveal">
+        <div class="status"><span class="status-dot"></span> Let's work together</div>
+        <h2>Have a role or a project? <span class="grad">Let's talk.</span></h2>
+        <p>I usually reply within a day. Email is best for job opportunities and project briefs.</p>
+        <div class="contact-cards">
+          <a class="ccard" href="mailto:manish.smn@gmail.com?subject=Job%20or%20project%20opportunity"><small>Email</small><b>manish.smn@gmail.com</b></a>
+          <a class="ccard" href="tel:+919887530136"><small>Phone / WhatsApp</small><b>+91 98875 30136</b></a>
+          <a class="ccard" href="https://linkedin.com/in/manish-suman-a182a892" target="_blank" rel="noopener"><small>LinkedIn</small><b>manish-suman-a182a892</b></a>
+          <a class="ccard" href="assets/Manish-Kumar-Suman-Resume.pdf" download><small>Resume</small><b>Download PDF ↓</b></a>
+        </div>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="mailto:manish.smn@gmail.com?subject=Job%20or%20project%20opportunity">Email me <span>↗</span></a>
+          <button class="btn btn-ghost" id="copy-email" type="button">Copy email address</button>
+          <a class="btn btn-ghost" href="https://wa.me/919887530136" target="_blank" rel="noopener">WhatsApp <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Manish Kumar Suman · Anta, Baran, Rajasthan, India</span>
+    <div class="footer-links">
+      <a href="https://linkedin.com/in/manish-suman-a182a892" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://apps.shopify.com/aptbook-appointment-booking" target="_blank" rel="noopener">APTBook ↗</a>
+      <a href="https://bookmizo.com/" target="_blank" rel="noopener">Bookmizo ↗</a>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#home" aria-label="Back to top">↑</a>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script src="script.js"></script>
 </body>
 </html>

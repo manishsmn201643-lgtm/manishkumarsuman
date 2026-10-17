@@ -1,66 +1,67 @@
-/* Before publishing, update the CONTACT object with your real details. */
-const CONTACT = {
-  email: 'YOUR_EMAIL@example.com',
-  linkedin: 'https://www.linkedin.com/',
-  github: 'https://github.com/'
-};
+(function () {
+  "use strict";
 
-const emailLink = document.getElementById('email-cta');
-const copyButton = document.getElementById('copy-email');
-const contactHint = document.getElementById('contact-hint');
-const linkedinLink = document.getElementById('linkedin-link');
-const githubLink = document.getElementById('github-link');
+  // Footer year
+  var year = document.getElementById("year");
+  if (year) year.textContent = new Date().getFullYear();
 
-function isPlaceholder(value) {
-  return !value || value.includes('YOUR_') || value.endsWith('example.com') || value.endsWith('linkedin.com/') || value.endsWith('github.com/');
-}
+  // Mobile navigation
+  var toggle = document.getElementById("menu-toggle");
+  var nav = document.getElementById("nav");
+  if (toggle && nav) {
+    toggle.addEventListener("click", function () {
+      var open = nav.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    nav.querySelectorAll("a").forEach(function (a) {
+      a.addEventListener("click", function () {
+        nav.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
 
-if (!isPlaceholder(CONTACT.email)) {
-  emailLink.href = `mailto:${CONTACT.email}?subject=${encodeURIComponent('Freelance development inquiry')}`;
-  copyButton.addEventListener('click', async () => {
-    try {
-      await navigator.clipboard.writeText(CONTACT.email);
-      copyButton.textContent = 'Email copied ✓';
-      setTimeout(() => copyButton.textContent = 'Copy email address', 1800);
-    } catch {
-      contactHint.textContent = `Email me directly at ${CONTACT.email}`;
-    }
-  });
-  contactHint.textContent = 'Prefer email? Use the button above to start a conversation.';
-} else {
-  copyButton.addEventListener('click', () => {
-    contactHint.textContent = 'Open script.js and replace YOUR_EMAIL@example.com with your real email before publishing.';
-  });
-}
+  // Copy email
+  var EMAIL = "manish.smn@gmail.com";
+  var copyBtn = document.getElementById("copy-email");
+  var toast = document.getElementById("toast");
+  function showToast(msg) {
+    if (!toast) return;
+    toast.textContent = msg;
+    toast.classList.add("show");
+    clearTimeout(showToast.t);
+    showToast.t = setTimeout(function () { toast.classList.remove("show"); }, 2200);
+  }
+  if (copyBtn) {
+    copyBtn.addEventListener("click", function () {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(EMAIL).then(function () {
+          showToast("Email copied: " + EMAIL);
+        }).catch(function () { showToast(EMAIL); });
+      } else {
+        showToast(EMAIL);
+      }
+    });
+  }
 
-if (!isPlaceholder(CONTACT.linkedin)) linkedinLink.href = CONTACT.linkedin;
-if (!isPlaceholder(CONTACT.github)) githubLink.href = CONTACT.github;
-linkedinLink.target = '_blank'; linkedinLink.rel = 'noopener noreferrer';
-githubLink.target = '_blank'; githubLink.rel = 'noopener noreferrer';
-document.getElementById('year').textContent = new Date().getFullYear();
+  // Reveal on scroll
+  var items = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    items.forEach(function (el) { io.observe(el); });
+  } else {
+    items.forEach(function (el) { el.classList.add("in"); });
+  }
 
-const menuButton = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.nav-links');
-menuButton.addEventListener('click', () => {
-  const open = nav.classList.toggle('open');
-  menuButton.setAttribute('aria-expanded', String(open));
-  menuButton.textContent = open ? '×' : '☰';
-});
-nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-  nav.classList.remove('open');
-  menuButton.setAttribute('aria-expanded', 'false');
-  menuButton.textContent = '☰';
-}));
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12 });
-document.querySelectorAll('.project-card, .service-card, .process-grid > div, .about-panel').forEach(el => {
-  el.classList.add('reveal');
-  observer.observe(el);
-});
+  // Back to top button
+  var toTop = document.querySelector(".to-top");
+  if (toTop) {
+    window.addEventListener("scroll", function () {
+      toTop.classList.toggle("show", window.scrollY > 600);
+    }, { passive: true });
+  }
+})();
